@@ -6,17 +6,13 @@
     <div>
       <h1><a href="">Blog Kasi</a></h1>
     </div>
-
+{% for post in posts %}
     <div>
-      <p>published: 17.09.2017, 11:20</p>
-      <h2><a href="">Moj pierwszy wpis</a></h2>
-      <p>Nie pamietam jaka byla tresc mojego pierwszego postu. Chyba pospiech, ale nie jestem pewna</p>
+      <p>published: {{post.published_date}}</p>
+      <h2><a href="">{{post.title}}</a></h2>
+      <p>{{post.text|linebreaksbr}}</p>
     </div>
-
-    <div>
-      <p>published: 17.09.2017, 11.31</p>
-      <h2><a href="">Moj drugi post</a></h2>
-      <p>Moj drugi post jest o...eeeee... aaaaaa...ummmm...niepamietam</p>
-    </div>
+{% endfor %}
+    
   </body>
 </html>
